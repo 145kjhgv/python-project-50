@@ -12,3 +12,9 @@ JSON files:
 
 YAML files:
 [![asciicast](https://asciinema.org/a/oNGk5M7uII9eJpfy1qyX4mU3Z.svg)](https://asciinema.org/a/oNGk5M7uII9eJpfy1qyX4mU3Z)
+
+Plain format output:
+[![asciicast](https://asciinema.org/a/kcHYJTFI9B716HgyTFEL3yzsg.svg)](https://asciinema.org/a/kcHYJTFI9B716HgyTFEL3yzsg)
+
+JSON format output:
+[![asciicast](https://asciinema.org/a/wiiuOGkdfNLKiLNEjZff0vSTR.svg)](https://asciinema.org/a/wiiuOGkdfNLKiLNEjZff0vSTR)
