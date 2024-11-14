@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1ee76263-347a-4b77-bc33-a0090b4524b5" name="Changes" comment="update deps">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/python-project-50.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2nzArbsebqxwcMutMdPT97hiVEo" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Makefile Target.lint.executor": "Run",
+    "Makefile Target.package-install.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/artem/PycharmProjects/oneproject/python-project-50/tests/fixtures",
+    "settings.editor.selected.configurable": "preferences.general"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests/fixtures" />
+      <recent name="$PROJECT_DIR$/gendiff" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests/fixtures" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/gendiff" />
+      <recent name="$PROJECT_DIR$/gendiff/scripts" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Makefile Target.lint">
+    <configuration name="lint" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="lint" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="package-install" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="package-install" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Makefile Target.lint" />
+        <item itemvalue="Makefile Target.package-install" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-0509580d9d50-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.14494.241" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ee76263-347a-4b77-bc33-a0090b4524b5" name="Changes" comment="" />
+      <created>1729965730121</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729965730121</updated>
+    </task>
+    <task id="LOCAL-00001" summary="update Makefile">
+      <option name="closed" value="true" />
+      <created>1730300378675</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1730300378675</updated>
+    </task>
+    <task id="LOCAL-00002" summary="step 2">
+      <option name="closed" value="true" />
+      <created>1730300735460</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1730300735460</updated>
+    </task>
+    <task id="LOCAL-00003" summary="step 3">
+      <option name="closed" value="true" />
+      <created>1730468796637</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730468796638</updated>
+    </task>
+    <task id="LOCAL-00004" summary="step 4">
+      <option name="closed" value="true" />
+      <created>1730557346996</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1730557346996</updated>
+    </task>
+    <task id="LOCAL-00005" summary="step 5">
+      <option name="closed" value="true" />
+      <created>1730821750963</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1730821750963</updated>
+    </task>
+    <task id="LOCAL-00006" summary="step 5">
+      <option name="closed" value="true" />
+      <created>1730821887918</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730821887918</updated>
+    </task>
+    <task id="LOCAL-00007" summary="step 5">
+      <option name="closed" value="true" />
+      <created>1730822059111</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1730822059111</updated>
+    </task>
+    <task id="LOCAL-00008" summary="step 5">
+      <option name="closed" value="true" />
+      <created>1730822510756</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1730822510756</updated>
+    </task>
+    <task id="LOCAL-00009" summary="step 6">
+      <option name="closed" value="true" />
+      <created>1730901277967</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1730901277967</updated>
+    </task>
+    <task id="LOCAL-00010" summary="step 6">
+      <option name="closed" value="true" />
+      <created>1730902852555</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1730902852555</updated>
+    </task>
+    <task id="LOCAL-00011" summary="step 7 &amp; 8">
+      <option name="closed" value="true" />
+      <created>1731419712985</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1731419712985</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fix linter">
+      <option name="closed" value="true" />
+      <created>1731510229176</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1731510229176</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add asciinemas">
+      <option name="closed" value="true" />
+      <created>1731510656680</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1731510656680</updated>
+    </task>
+    <task id="LOCAL-00014" summary="update readme">
+      <option name="closed" value="true" />
+      <created>1731510832169</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1731510832169</updated>
+    </task>
+    <task id="LOCAL-00015" summary="update readme">
+      <option name="closed" value="true" />
+      <created>1731573267229</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1731573267229</updated>
+    </task>
+    <task id="LOCAL-00016" summary="update readme">
+      <option name="closed" value="true" />
+      <created>1731574109027</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1731574109027</updated>
+    </task>
+    <task id="LOCAL-00017" summary="update makefile">
+      <option name="closed" value="true" />
+      <created>1731574213164</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1731574213164</updated>
+    </task>
+    <task id="LOCAL-00018" summary="update deps">
+      <option name="closed" value="true" />
+      <created>1731574690257</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1731574690257</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update Makefile" />
+    <MESSAGE value="step 2" />
+    <MESSAGE value="step 3" />
+    <MESSAGE value="step 4" />
+    <MESSAGE value="step 5" />
+    <MESSAGE value="step 6" />
+    <MESSAGE value="step 7 &amp; 8" />
+    <MESSAGE value="fix linter" />
+    <MESSAGE value="add asciinemas" />
+    <MESSAGE value="update readme" />
+    <MESSAGE value="update makefile" />
+    <MESSAGE value="update deps" />
+    <option name="LAST_COMMIT_MESSAGE" value="update deps" />
+  </component>
+</project>
