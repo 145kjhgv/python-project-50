@@ -21,6 +21,3 @@ test:
 
 test-coverage:
 	poetry run pytest --cov=gendiff --cov-report xml tests/
-
-check:
-	make lint && make test
