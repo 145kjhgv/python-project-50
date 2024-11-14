@@ -4,11 +4,11 @@ version = "0.1.0"
 description = ""
 authors = ["artem <artem_smirnov88@mail.ru>"]
 packages = [
-  { include = "gendiff" },
+    { include = "gendiff" },
 ]
 
 [tool.poetry.dependencies]
-python = "^3.12.2"
+python = "3.12.2"
 flake8 = "^7.1.1"
 pytest = "^8.3.3"
 pytest-cov = "^6.0.0"
