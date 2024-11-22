@@ -8,7 +8,6 @@
 ## Stack of technologies:
 
 * Python
-* Pytest
 * Сoverage
 * Flake8
 * Iniconfig
