@@ -1,6 +1,16 @@
-"""Formatters package"""
+from gendiff.formatters.constants import FORMATS
+from gendiff.formatters.json import render_json
+from gendiff.formatters.plain import render_plain
+from gendiff.formatters.stylish import render_stylish
 
-from gendiff.formatters.stylish import format_ as format_stylish  # noqa: F401
-from gendiff.formatters.plain import format_ as format_plain  # noqa: F401
-from gendiff.formatters.json import format_ as format_json  # noqa: F401
-from gendiff.formatter import formatting  # noqa: F401
+
+def get_formatter(formater):
+    match formater:
+        case FORMATS.STYLISH:
+            return render_stylish
+        case FORMATS.PLAIN:
+            return render_plain
+        case FORMATS.JSON:
+            return render_json
+
+    raise ValueError(f"Unrecognized formater: {formater}")

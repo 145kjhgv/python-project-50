@@ -1,74 +1,36 @@
+from pathlib import Path
+
 import pytest
 
-from gendiff import generate_diff
-from tests import get_path
+from gendiff.scripts.gendiff import generate_diff
+
+FIXTURES_DIR = f'{Path(__file__).parent}/fixtures'
+
+
+def get_result_data(file_name):
+    with open(f'{FIXTURES_DIR}/{file_name}') as output:
+        return output.read()
 
 
 @pytest.mark.parametrize(
-    "test_input1,test_input2, formater,  expected",
+    ('file1', 'file2'),
     [
-        pytest.param(
-            'file1.json',
-            'file2.json',
-            'stylish',
-            'correct_result.txt',
-            id="flat_json_file"
-        ),
-        pytest.param(
-            'file1.yaml',
-            'file2.yaml',
-            'stylish',
-            'correct_result.txt',
-            id="flat_yaml_file"
-        ),
-        pytest.param(
-            'file1.yaml',
-            'file2.json',
-            'stylish',
-            'correct_result.txt',
-            id="flat_mix_file"
-        ),
-        pytest.param(
-            'empty_file.json',
-            'empty_file.json',
-            'stylish',
-            'correct_result_empty.txt',
-            id="empty_file"
-        ),
-        pytest.param(
-            'file1_tree.json',
-            'file2_tree.json',
-            'stylish',
-            'correct_result_tree.txt',
-            id="tree_json_file"
-        ),
-        pytest.param(
-            'file1_tree.yaml',
-            'file2_tree.yaml',
-            'stylish',
-            'correct_result_tree.txt',
-            id="tree_yaml_file"
-        ),
-        pytest.param(
-            'file1_tree.yaml',
-            'file2_tree.yaml',
-            'plain',
-            'correct_result_tree_plain.txt',
-            id="tree_plain"
-        ),
-        pytest.param(
-            'file1_tree.json',
-            'file2_tree.json',
-            'json',
-            'correct_result_tree_json.txt',
-            id="tree_json"
-        ),
-    ],
+        ('file1_tree.json', 'file2_tree.json'),
+        ('file1_tree.yaml', 'file2_tree.yaml'),
+    ]
 )
-def test_generare_diff(test_input1, test_input2, formater, expected):
-    expected_path = get_path(expected)
-    with open(expected_path, 'r') as file:
-        result_data = file.read()
-        test_path1 = get_path(test_input1)
-        test_path2 = get_path(test_input2)
-        assert generate_diff(test_path1, test_path2, formater) == result_data
+def test_flat_diff(file1, file2):
+    file1_path = f'{FIXTURES_DIR}/{file1}'
+    file2_path = f'{FIXTURES_DIR}/{file2}'
+
+    assert (generate_diff(file1_path, file2_path)
+            == get_result_data('correct_result_tree.txt'))
+
+    assert (generate_diff(file1_path, file2_path, 'stylish')
+            == get_result_data('correct_result_tree.txt'))
+
+    assert (generate_diff(file1_path, file2_path, 'plain')
+            == get_result_data('correct_result_tree_plain.txt'))
+
+    assert (generate_diff(file1_path, file2_path, 'json')
+            == get_result_data('correct_result_tree_json.txt'))

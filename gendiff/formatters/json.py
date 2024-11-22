@@ -1,8 +1,5 @@
-"""JSON module - apply JSON view to diff"""
+import json as json_global
 
 
-import json
-
-
-def format_(tree: list) -> json:
-    return json.dumps(tree, indent=4)
+def render_json(diff) -> str:
+    return json_global.dumps(diff)

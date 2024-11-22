@@ -1,46 +1,41 @@
-"""Plain module - apply plain view to diff"""
+from typing import Any, Union
 
 
-def to_string(value):
+def to_str(value: Any) -> [Union[str, int]]:
     if isinstance(value, dict):
-        return '[complex value]'
+        return "[complex value]"
     if isinstance(value, bool):
-        return "true" if value else "false"
-    if isinstance(value, int):
-        return value
+        return str(value).lower()
     if value is None:
         return "null"
+    if isinstance(value, int):
+        return value
     return f"'{value}'"
 
 
-def iter_(node: dict, path="") -> str:
-    children = node.get('children')
-    current_path = f"{path}{node.get('key')}"
+def build_plain_iter(diff: dict, path="") -> str:
+    lines = list()
+    for dictionary in diff:
+        property = f"{path}{dictionary['key']}"
 
-    if node['type'] == 'root':
-        lines = map(lambda child: iter_(child, path), children)
-        result = "\n".join(filter(bool, lines))
-        return result
+        if dictionary['operation'] == 'add':
+            lines.append(f"Property '{property}' "
+                         f"was added with value: "
+                         f"{to_str(dictionary['new'])}")
 
-    if node['type'] == 'nested':
-        lines = map(lambda child: iter_(child, f"{current_path}."), children)
-        result = "\n".join(filter(bool, lines))
-        return result
+        if dictionary['operation'] == 'removed':
+            lines.append(f"Property '{property}' was removed")
 
-    if node['type'] == 'removed':
-        return f"Property '{current_path}' was removed"
+        if dictionary['operation'] == 'nested':
+            new_value = build_plain_iter(dictionary['value'], f"{property}.")
+            lines.append(f"{new_value}")
 
-    if node['type'] == 'added':
-        formatted_value = to_string(node.get('value'))
-        return f"Property '{current_path}' was added " \
-               f"with value: {formatted_value}"
-
-    if node['type'] == 'changed':
-        formatted_old_value = to_string(node.get('old_value'))
-        formatted_new_value = to_string(node.get('new_value'))
-        return f"Property '{current_path}' was updated. " \
-               f"From {formatted_old_value} to {formatted_new_value}"
+        if dictionary['operation'] == 'changed':
+            lines.append(f"Property '{property}' was updated. "
+                         f"From {to_str(dictionary['old'])} to "
+                         f"{to_str(dictionary['new'])}")
+    return '\n'.join(lines)
 
 
-def format_(node: dict):
-    return iter_(node)
+def render_plain(diff: dict) -> str:
+    return build_plain_iter(diff)
