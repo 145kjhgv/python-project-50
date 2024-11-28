@@ -1,18 +1,30 @@
+import os
 from os.path import splitext
 
-from gendiff.engine import get_file_data
-from gendiff.formatter import formatting
-from gendiff.tree import build_tree
+from gendiff.dicts_diff import build_diff
+from gendiff.formatters import get_formatter
+from gendiff.parser import parse
 
 
-def generate_diff(file_path1: str,
-                  file_path2: str,
-                  format_name="stylish") -> str:
-    dict_1 = dict(get_file_data(file_path1))
-    dict_2 = dict(get_file_data(file_path2))
-    tree = build_tree(dict_1, dict_2)
-    diff = formatting(tree, format_name)
-    return diff
+def get_file_extension(file_path: str) -> str:
+    _, file_extension = os.path.splitext(file_path)
+    return file_extension
+
+
+def get_file_data(file_path: str) -> str:
+    file_extension = get_file_extension(file_path)
+    file_data = parse(file_path, file_extension)
+    return file_data
+
+
+def generate_diff(path_file1: str, path_file2: str,
+                  formater: str = 'stylish') -> str:
+    data1, format1 = prepare_data(path_file1)
+    data2, format2 = prepare_data(path_file2)
+    parced_data1 = parse(data1, format1)
+    parced_data2 = parse(data2, format2)
+    diff = build_diff(parced_data1, parced_data2)
+    return get_formatter(formater)(diff)
 
 
 EXTENSIONS = ('yaml', 'yml', 'json')
