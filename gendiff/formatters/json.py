@@ -1,5 +1,5 @@
-import json as json_global
+import json
 
 
 def render_json(diff) -> str:
-    return json_global.dumps(diff)
+    return json.dumps(diff)
